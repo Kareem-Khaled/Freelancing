@@ -1,0 +1,8 @@
+A,mail,209.126.4.246,1
+A+,track1,209.126.4.246,5
+AAAA,track2,2001:0db8:85a3:0000:0000:8a2e:0370:7334,20
+ALIAS,track3,prox.itrackly.com.,5
+TXT,@,v=spf1 a mx ip4:209.126.4.246 ~all,30
+CNAME,track1,prox.itrackly.com.,
+NS,track1,prox.itrackly.com.,1
+URL,track1,https://temp.com,5
