@@ -1,0 +1,23 @@
+{
+  "name": "katisportcap",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "cheerio": "^1.0.0-rc.12",
+    "fetch-cookie": "^2.1.0",
+    "fetch-cookie-v2": "^0.0.2",
+    "https": "^1.0.0",
+    "image-downloader": "^4.3.0",
+    "images-downloader": "^1.0.3",
+    "node-fetch": "^3.2.10",
+    "node-xlsx": "^0.21.0",
+    "puppeteer": "^19.2.0",
+    "xlsx": "^0.18.5"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
