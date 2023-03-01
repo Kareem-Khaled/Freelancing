@@ -1,0 +1,1 @@
+cmd /k pip install selenium webdriver-manager lxml beautifulsoup4
