@@ -1,0 +1,1 @@
+cmd /k pip install regex selenium webdriver-manager beautifulsoup4 lxml
