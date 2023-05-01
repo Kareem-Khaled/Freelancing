@@ -11,7 +11,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 def save_image(driver, url, folder):
 
-    # To soave the original image
+    # To save the original image
     driver.get(url)
     data = driver.execute_script("return fetch(arguments[0]).then(response => response.arrayBuffer()).then(buffer => new Uint8Array(buffer));", url)
 
