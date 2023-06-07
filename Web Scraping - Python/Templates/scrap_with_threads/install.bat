@@ -1,0 +1,1 @@
+cmd /k pip install requests beautifulsoup4 lxml selenium requests-html webdriver_manager openpyxl
