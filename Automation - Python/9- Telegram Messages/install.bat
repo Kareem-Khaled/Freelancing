@@ -1,0 +1,1 @@
+cmd /k pip install selenium webdriver_manager asyncio python-telegram-bot tkinter
