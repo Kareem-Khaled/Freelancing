@@ -1,1 +1,0 @@
-cmd /k pip install openpyxl docx2pdf docxtpl
