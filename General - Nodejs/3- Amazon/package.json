@@ -1,0 +1,31 @@
+{
+  "name": "amazon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron . --js-flags=--max-old-space-size=4096"
+  },
+  "keywords": [],
+  "author": "Kareem Khaled",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.6",
+    "async-mutex": "^0.5.0",
+    "better-queue": "^3.8.12",
+    "cheerio": "^1.0.0",
+    "fs-extra": "^11.3.0",
+    "lodash": "^4.17.21",
+    "mongodb": "^6.16.0",
+    "node-cache": "^5.1.2",
+    "puppeteer": "^24.6.1",
+    "random-useragent": "^0.5.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
+  },
+  "devDependencies": {
+    "electron": "^35.1.4",
+    "electron-packager": "^17.1.2"
+  }
+}
