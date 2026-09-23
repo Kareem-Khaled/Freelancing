@@ -1,0 +1,18 @@
+ACME CORP — INFORMATION SECURITY POLICY
+Document ID: POL-002 | Effective: 2026-03-15
+
+Password Requirements
+Passwords must be at least 14 characters and include mixed case, a number and
+a symbol. Passwords expire every 180 days.
+
+Multi-Factor Authentication
+MFA is mandatory for all staff accessing production systems. Hardware keys are
+required for engineers with database access.
+
+Incident Reporting
+Suspected security incidents must be reported to security@acme.example within
+one hour of discovery. Do not attempt to investigate independently.
+
+Data Retention
+Customer data is retained for 7 years after account closure, then permanently
+deleted.

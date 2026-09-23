@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Knowledge Assistant</title>
+<link rel="stylesheet" href="/static/style.css">
+<link rel="icon" href="data:,">
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <span class="dot"></span>
+    <h1>Enterprise Knowledge Assistant</h1>
+  </div>
+  <div class="model-info" id="model-info">connecting…</div>
+</header>
+
+<main>
+  <!-- ============ left: ask ============ -->
+  <section class="col-left">
+
+    <div class="card">
+      <h2>Ask your documents</h2>
+      <textarea id="question" rows="3"
+        placeholder="e.g. What is the refund policy for enterprise customers?"></textarea>
+
+      <div class="row">
+        <button id="ask" class="primary">Ask</button>
+        <span class="hint">Answers come only from indexed documents. Cmd/Ctrl+Enter to send.</span>
+      </div>
+
+      <div class="samples">
+        <span class="hint">Try:</span>
+        <button class="chip" data-q="What is the refund policy for enterprise customers?">refund policy</button>
+        <button class="chip" data-q="How long do I have to submit expenses?">expense deadline</button>
+        <button class="chip" data-q="What are the password requirements?">password rules</button>
+        <button class="chip" data-q="How many seats does an enterprise plan include?">seat limits</button>
+        <button class="chip" data-q="What is the capital of France?">⚠ off-topic</button>
+      </div>
+
+      <div id="job-status" class="job hidden"></div>
+      <div id="answer" class="result hidden"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2>Knowledge base</h2>
+        <span class="hint" id="kb-summary"></span>
+        <button id="load-corpus" class="ghost small">Load samples</button>
+      </div>
+
+      <div id="dropzone" class="dropzone">
+        <input type="file" id="file-input" hidden multiple
+               accept=".pdf,.docx,.txt,.md,.png,.jpg,.jpeg">
+        <div class="dz-icon">⇪</div>
+        <div class="dz-main">Drop documents here, or <span class="link">browse</span></div>
+        <div class="dz-sub">PDF · DOCX · TXT · MD · images — indexed on upload</div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Document</th><th>Type</th><th>Chunks</th><th>Status</th><th></th></tr>
+          </thead>
+          <tbody id="docs-body">
+            <tr><td colspan="5" class="empty">No documents indexed yet.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ right: pipeline + metrics + detail ============ -->
+  <section class="col-right">
+    <div class="card">
+      <h2>Pipeline</h2>
+      <div class="pipeline">
+        <span>documents</span><i>→</i><span>chunks</span><i>→</i>
+        <span>embeddings</span><i>→</i><span class="on">retrieval</span><i>→</i>
+        <span>LLM</span><i>→</i><span class="on">cited answer</span>
+      </div>
+      <p class="footnote" id="embedder-note"></p>
+    </div>
+
+    <div class="card">
+      <h2>Metrics</h2>
+      <div id="metrics" class="metrics"><span class="hint">loading…</span></div>
+    </div>
+
+    <div class="card grow">
+      <h2>Detail</h2>
+      <div id="detail"><span class="hint">Ask a question, or click a document to see its chunks.</span></div>
+    </div>
+  </section>
+</main>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+# Runtime dependencies
+fastapi>=0.110
+uvicorn[standard]>=0.27
+python-multipart>=0.0.9     # file uploads
+openai>=1.40
+pydantic>=2.7
+pydantic-settings>=2.0
+
+# Document parsing
+pypdf>=4.0                  # PDF text extraction
+python-docx>=1.1            # DOCX
+pillow>=10.0                # image validation
+
+# OCR for scanned PDFs and images.
+# Free and open source, but needs the tesseract BINARY as well as this package:
+#   macOS:  brew install tesseract
+#   Ubuntu: apt install tesseract-ocr
+# Without the binary, images are rejected with a clear message rather than
+# silently returning empty text.
+pytesseract>=0.3.10
+
+# Tests use only the standard library (unittest).

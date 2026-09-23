@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Document Intelligence</title>
+<link rel="stylesheet" href="/static/style.css">
+<link rel="icon" href="data:,">
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <span class="dot"></span>
+    <h1>Document Intelligence</h1>
+  </div>
+  <div class="model-info" id="model-info">connecting…</div>
+</header>
+
+<main>
+  <!-- ============ left: upload + queue ============ -->
+  <section class="col-left">
+
+    <div class="card">
+      <h2>Upload an invoice</h2>
+
+      <div id="dropzone" class="dropzone">
+        <input type="file" id="file-input" hidden
+               accept=".pdf,.docx,.png,.jpg,.jpeg,.txt">
+        <div class="dz-icon">⇪</div>
+        <div class="dz-main">Drop a file here, or <span class="link">browse</span></div>
+        <div class="dz-sub">PDF · DOCX · PNG/JPG · TXT — up to 10 MB</div>
+      </div>
+
+      <div class="row">
+        <span class="hint" id="file-name"></span>
+        <button id="upload" class="primary" disabled>Extract</button>
+      </div>
+
+      <div class="samples">
+        <span class="hint">Or try a sample:</span>
+        <button class="chip" data-sample="clean">clean invoice</button>
+        <button class="chip" data-sample="bad_maths">⚠ bad arithmetic</button>
+        <button class="chip" data-sample="scan">scanned image (OCR)</button>
+        <button class="chip" data-sample="arabic">arabic invoice</button>
+        <button class="chip" data-sample="docx">DOCX</button>
+        <button class="chip" data-sample="not_invoice">not an invoice</button>
+      </div>
+
+      <div id="job-status" class="job hidden"></div>
+      <div id="result" class="result hidden"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2>Documents</h2>
+        <div class="counts" id="counts"></div>
+        <button id="refresh" class="ghost small">Refresh</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Document</th><th>Type</th><th>Vendor</th>
+              <th>Total</th><th>Review</th>
+            </tr>
+          </thead>
+          <tbody id="docs-body">
+            <tr><td colspan="5" class="empty">No documents yet.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ right: pipeline + metrics + detail ============ -->
+  <section class="col-right">
+    <div class="card">
+      <h2>Pipeline</h2>
+      <div class="pipeline">
+        <span>parse</span><i>→</i><span class="on">LLM</span><i>→</i>
+        <span>normalise</span><i>→</i><span class="on">validate</span>
+        <i>→</i><span>decision</span>
+      </div>
+      <p class="footnote">The model reads the document; deterministic arithmetic
+      checks whether the numbers actually add up. Findings are reported, never
+      silently corrected.</p>
+    </div>
+
+    <div class="card">
+      <h2>Metrics</h2>
+      <div id="metrics" class="metrics"><span class="hint">loading…</span></div>
+    </div>
+
+    <div class="card grow">
+      <h2>Document detail</h2>
+      <div id="detail"><span class="hint">Select a document from the list.</span></div>
+    </div>
+  </section>
+</main>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

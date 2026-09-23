@@ -1,0 +1,9 @@
+# Runtime dependencies
+openai>=1.40
+pydantic>=2.7
+pydantic-settings>=2.0      # typed config from env vars / .env
+
+# Language detection is done by the model itself as part of the analysis, so no
+# detection library is needed.
+
+# Tests use only the standard library (unittest).

@@ -1,0 +1,67 @@
+{
+  "backend": "hashing",
+  "semantic": false,
+  "pairs": [
+    {
+      "corpus": "What is the current P1 initial response target?",
+      "natural": "How fast do you reply to emergencies?",
+      "corpus_answered": true,
+      "natural_answered": false
+    },
+    {
+      "corpus": "What payment data is prohibited from being sent to a general-purpose LLM?",
+      "natural": "Can I paste a customer's credit card into ChatGPT?",
+      "corpus_answered": true,
+      "natural_answered": true
+    },
+    {
+      "corpus": "What are NovaDesk's current business hours for non-P1 support?",
+      "natural": "When can I reach someone on the phone?",
+      "corpus_answered": true,
+      "natural_answered": false
+    },
+    {
+      "corpus": "Is an SLA outage compensated with a cash refund or a service credit?",
+      "natural": "If you go down, do I get my money back?",
+      "corpus_answered": true,
+      "natural_answered": false
+    },
+    {
+      "corpus": "What is the Enterprise Plus included monthly API volume?",
+      "natural": "How many requests can we make before extra charges kick in?",
+      "corpus_answered": true,
+      "natural_answered": false
+    },
+    {
+      "corpus": "What approvals are required to reverse a duplicate charge?",
+      "natural": "Who has to sign off before we give someone their money back?",
+      "corpus_answered": true,
+      "natural_answered": false
+    },
+    {
+      "corpus": "How should an AI agent handle a possible security breach reply?",
+      "natural": "Can the bot answer on its own if someone got hacked?",
+      "corpus_answered": true,
+      "natural_answered": false
+    },
+    {
+      "corpus": "What is the production API path for creating a ticket?",
+      "natural": "How do I file a new issue programmatically?",
+      "corpus_answered": true,
+      "natural_answered": false
+    }
+  ],
+  "off_topic": [
+    {
+      "question": "What is the capital of France?",
+      "refused": true
+    },
+    {
+      "question": "How do I bake sourdough bread?",
+      "refused": true
+    }
+  ],
+  "corpus_answered": 8,
+  "natural_answered": 1,
+  "off_topic_refused": 2
+}

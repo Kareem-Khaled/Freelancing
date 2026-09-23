@@ -1,0 +1,19 @@
+ACME CLOUD — ADMINISTRATOR MANUAL
+Chapter 4: User Management
+
+4.1 Adding Users
+Navigate to Settings > Team > Invite. Enter the email address and select a
+role. Invitations expire after 7 days.
+
+4.2 Roles and Permissions
+Four roles exist: Viewer, Editor, Admin and Owner. Only an Owner can delete the
+workspace or change billing details. There can be at most one Owner per
+workspace.
+
+4.3 Removing Users
+Removing a user immediately revokes their sessions. Their content is
+transferred to the workspace Owner by default.
+
+4.4 Seat Limits
+Enterprise plans include 50 seats. Additional seats are billed at $12 per seat
+per month, prorated to the billing cycle.

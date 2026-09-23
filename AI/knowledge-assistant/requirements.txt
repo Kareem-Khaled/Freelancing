@@ -1,0 +1,21 @@
+# Runtime dependencies
+fastapi>=0.110
+uvicorn[standard]>=0.27
+python-multipart>=0.0.9     # file uploads
+openai>=1.40
+pydantic>=2.7
+pydantic-settings>=2.0
+numpy>=1.24                 # vector maths; no vector DB needed at this scale
+
+# Document parsing
+pypdf>=4.0
+python-docx>=1.1
+pillow>=10.0
+pytesseract>=0.3.10         # needs the tesseract binary: brew install tesseract tesseract-lang
+
+# Optional: real semantic embeddings (~2GB with PyTorch).
+# Without it the service falls back to lexical hashing + BM25, which works but
+# cannot match synonyms. Install, then run: curl -X POST .../reindex
+# sentence-transformers>=2.2
+
+# Tests use only the standard library (unittest).

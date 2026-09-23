@@ -1,0 +1,24 @@
+ACME CLOUD — REFUND AND CANCELLATION POLICY
+Document ID: POL-004 | Effective: 2026-01-01
+
+1. SCOPE
+This policy governs refunds for all ACME Cloud subscription plans.
+
+2. Standard Plans
+Customers on Starter and Pro plans may request a refund within 14 days of the
+original purchase date. Refunds are issued to the original payment method and
+take 5 to 7 business days to appear.
+
+3. Enterprise Plans
+Enterprise customers may request a refund within 30 days of the invoice date.
+Refunds exceeding $10,000 require written approval from the Finance Director.
+Partial refunds are calculated pro-rata for unused licence seats, rounded down
+to the nearest whole month.
+
+4. Non-Refundable Items
+Professional services, onboarding fees and custom development work are
+non-refundable once delivery has begun.
+
+5. Duplicate Charges
+Verified duplicate charges are always refunded in full, regardless of the
+windows described above.

@@ -1,0 +1,26 @@
+ACME SUPPLIES LTD
+742 Industrial Way, Manchester M1 4XY
+
+INVOICE
+
+Invoice Number: INV-10932
+Date: 10/09/2026
+Due Date: 10/10/2026
+PO Number: PO-4471
+
+Bill To:
+Northwind Trading Co
+15 Harbour Road, Liverpool L3 9QT
+
+Description                     Qty    Unit Price      Amount
+------------------------------------------------------------
+Steel brackets (type A)          40         12.50      500.00
+Mounting plates                  25         18.00      450.00
+Delivery handling                 1        250.00      250.00
+------------------------------------------------------------
+                                        Subtotal     1,200.00
+                                         VAT 16%       192.00
+                                            TOTAL    1,392.00
+
+Currency: USD
+Payment terms: Net 30
